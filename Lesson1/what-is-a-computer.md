@@ -29,6 +29,6 @@ Computer hardware are the physical components of the computing system. A typical
 
     Common input devices are:
     | Keyboard | Camera | Graphic Tablet | Webcam | Mouse | Microphone |
-    | :--: | -- | -- | -- | -- | -- |
+    | :--: | :--: | :--: | :--: | :--: | :--: |
     | ![Keyboar](media/keyboard.jpg) | ![Camera](media/camera.jpg) | ![Graphic Tablet](media/graphic-tablet.png) | ![Webcam](media/webcam.png) | ![Mouse](media/mouse.png) | ![Microphone](media/microphone.png) |
 
