@@ -102,7 +102,7 @@ Computer hardware are the physical components of the computing system. A typical
         ![Converting Hi to Binary to store it in memory](media/hi-in-binary-to-main-memory.png)
         _Notice that the text, "Hi" is occupying 2 memory locations. When we start coding you will know why._
 
-        
+
 
 
 
