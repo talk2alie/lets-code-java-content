@@ -102,6 +102,80 @@ Computer hardware are the physical components of the computing system. A typical
         ![Converting Hi to Binary to store it in memory](media/hi-in-binary-to-main-memory.png)
         _Notice that the text, "Hi" is occupying 2 memory locations. When we start coding you will know why._
 
+        The same thing happens when you send your friend an image. The image is made of tiny squares called **pixels**. Each pixel is a spec of color on your screen. Color is a combination of Red, Green and Blue values called **channels**. Each channel can have a value of 0 - 255, where 0 means the color is missing from the pixel and 255 means the pixel has the full intensity of the color. Your computer simply takes the numeric values associated with the colors in the pixels, convert them to binary values and store those in memory.
+
+        To store your videos, your computer adds one more step from above. A video is a series of sequential images, called **frames**. Each frame contains several pixels. Your computer collects the numeric values of the channels within those pixels, convert them to binary and store them in memory.
+
+        As you can see, once you figure out how to represent any type of data as a number, the computer can store it because the computer is very good at converting from decimal numbers to binary numbers.
+
+        _**Unicode Character Set**_
+
+        The collection of characters in a given character standard is called a **character set**. As you might have noticed, we only need exactly 8 bits (or 1 byte) to store the largest character on the extended-ASCII table. This means the ASCII standard is an 8-bit character set. 
+
+        > Collectively, ASCII and extended-ASCII has characters with decimal values from 0 to 255, where 0 is the smallest character and 255 is the largest character. 255 to binary is 1111 1111. When all the bits are 1 (or on) at any memory location, we say that location is full. So 255 will fill up any memory location where it is stored. Since it is the largest ASCII value and it is exactly 1 byte (8 bits = 1 byte), we say ASCII is an 8-bit standard.
+        
+        Because both ASCII standards only account for 256 characters, it is obvious they do not account for all characters in most spoken languages. As such, the **Unicode** standard was created. The Unicode standard is a superset of the ASCII standard, meaning all the characters found in ASCII can be found in Unicode, plus a bunch more.
+
+        The Unicode character set has characters that require up to 32-bits (or 4 bytes). The emojis we love so much are also defined in the Unicode character set. For example, 😊 has the decimal value 4,036,991,114, which is equivalent to the following bits: 11110000 10011111 10011000 10001010. As you can see, we need up to 32 bits to represent our beloved smiling face with smiling eyes emoji. There is no way we could store emojis with the ASCII standard.
+
+        😊 = 4,036,991,114 = 11110000 10011111 10011000
+        
+        _Emoji is a whole new language that has its own set of characters, just like English or Spanish._
+    
+        _**Abstraction**_
+
+        What if you had to compile the frames in a YouTube video, collect their pixels and add up all the numeric values for each color channel, then convert all those numbers to binary in order to store them in your computer's memory, just so you can watch a grandma sleep with chocolate on her face? What if you had to do all that work?
+
+        ![Frustrated Man](media/abstraction-frustration.png)
+        **Exactly!** You will definitely not watch YouTube videos, ever!
+
+        Lucky for you, your computer employs a concept known as **abstraction**. Abstraction allows your computer to hide all the details of converting frames to images, and images to pixels, and pixels to decimal numbers, and decimal numbers to binary numbers. Instead it presents you with an interface where you can search for a video and click a single button to play your YouTube videos. This is why your computer is so useful. It takes away all the tedious tasks, and give you an easy way to enjoy your work or your entertainment.
+
+	
+	    FYI, abstraction is all around us; not only in computer science. It is, for instance, the reason you can learn to drive a car without worrying about how a car works internally. It is also the reason that when you learn to drive one car, you can pretty much drive any other car in the same category. If you had to think about what happens in a car's engine every time you pressed the gas, you probably would never drive. So abstraction is a very important concept not only in computer science, but in all our lives.
+
+        ![Porsche](media/porsche.jpg)
+        _As beautiful and straightforward as the interior of this Porsche Cayenne looks, it is an abstraction of really complex operations that occur in a combustion engine._
+
+3. **Output Devices**
+
+    **Output** is any data or information you get from your computer. As a result, any physical device you use to retrieve data from your computer is an output device. 
+	
+	Your computer output can be **soft**, displayed on some device that is part of the computing system, like a screen, or it can be **hard**, output to an object external to the computing system, like a paper, a billboard or a magazine.
+
+    Common output devices are:
+    | Printer | Memory Card* | Monitor | Tablet Screen* | Flash Drive* |
+    | -- | -- | -- | -- | -- |
+    | ![Canon Printer](media/printer.png) | ![Memory Card](media/memory-card.png) | ![Dell Monitor](media/monitor.png) | ![Tablet Screen](media/ipad.png) | ![Flash Drive](media/flash-drive.jpg) |
+    | _Produces hard copy_ | _Produces soft copy_ | _Produces soft copy_ | _Produces soft copy_ | _Produces soft copy_ |
+    
+    _* Some devices are both input and output devices. For example, your computer can save (output) images to a flash drive. It can also load (input) images from a flash drive for editing._
+
+    **Secondar Memory**
+
+    We described the main memory earlier as a short term memory that will lose its data when you shut your computer down. Well, if the main memory were the only type of storage, your computer would be a very forgetful device, 😂. 
+	
+	Storage manufacturers also provide another type of storage device called **secondary memory**. These devices store data permanently, so you can think of them like your long term memory. Every computer comes with one; even yours!
+	
+	Just like your long term memory, data stored on a secondary memory is there forever, unless explicitly deleted or lost from some catastrophic event. Secondary memory devices also come in larger sizes than main memory. For example, your computer probably has a main memory that is 8 GB in size, but your secondary memory (hard drive or SSD) is probably 256 GB. This is because the main memory is faster, but more expensive. The larger your computer's main memory, the more expensive your computer. 
+	
+	Example of secondary memories include: Hard Disk Drives, Solid State Drives (SSDs), Memory Card, Flash Drive, etc.
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
 
 
 
