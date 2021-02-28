@@ -119,6 +119,7 @@ Because both ASCII standards only account for 256 characters, it is obvious they
 The Unicode character set has characters that require up to 32-bits (or 4 bytes). The emojis we love so much are also defined in the Unicode character set. For example, 😊 has the decimal value 4,036,991,114, which is equivalent to the following bits: 11110000 10011111 10011000 10001010. As you can see, we need up to 32 bits to represent our beloved smiling face with smiling eyes emoji. There is no way we could store emojis with the ASCII standard.
 
 😊 = 4,036,991,114 = 11110000 10011111 10011000
+
 _Emoji is a whole new language that has its own set of characters, just like English or Spanish._
     
 _Abstraction_
