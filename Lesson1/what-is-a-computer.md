@@ -100,7 +100,6 @@ Given the ASCII and extended-ASCII tables, if you wanted to store the letter A, 
 For example, when you send a text to your friend, with the message, "Hi," here is what happens:
 
 ![Converting Hi to Binary to store it in memory](media/hi-in-binary-to-main-memory.png)
-
 _Notice that the text, "Hi" is occupying 2 memory locations. When we start coding you will know why._
 
 The same thing happens when you send your friend an image. The image is made of tiny squares called **pixels**. Each pixel is a spec of color on your screen. Color is a combination of Red, Green and Blue values called **channels**. Each channel can have a value of 0 - 255, where 0 means the color is missing from the pixel and 255 means the pixel has the full intensity of the color. Your computer simply takes the numeric values associated with the colors in the pixels, convert them to binary values and store those in memory.
