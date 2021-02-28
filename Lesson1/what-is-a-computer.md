@@ -130,7 +130,7 @@ What if you had to compile the frames in a YouTube video, collect their pixels a
 
 **Exactly!** You will definitely not watch YouTube videos, ever!
 
-Lucky for you, your computer employs a concept known as **abstraction**. Abstraction allows your computer to hide all the details of converting frames to images, and images to pixels, and pixels to decimal numbers, and decimal numbers to binary numbers. Instead it presents you with an interface where you can search for a video and click a single button to play your YouTube videos. This is why your computer is so useful. It takes away all the tedious tasks, and give you an easy way to enjoy your work or your entertainment.
+Lucky for you, your computer employs a concept known as **abstraction** to take all that burden away from you. Abstraction allows your computer to hide all the details of converting frames to images, and images to pixels, and pixels to decimal numbers, and decimal numbers to binary numbers. Instead it presents you with an interface where you can search for a video and click a single button to play your YouTube videos. This is why your computer is so useful. It takes away all the tedious tasks, and give you an easy way to enjoy your work or your entertainment.
 
 FYI, abstraction is all around us; not only in computer science. It is, for instance, the reason you can learn to drive a car without worrying about how a car works internally. It is also the reason that when you learn to drive one car, you can pretty much drive any other car in the same category. If you had to think about what happens in a car's engine every time you pressed the gas, you probably would never drive. So abstraction is a very important concept not only in computer science, but in all our lives.
 
