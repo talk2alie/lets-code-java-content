@@ -93,7 +93,7 @@ Luckily for us, a group of really smart people came together a long time ago and
 
 You can find the full ASCII table [here](http://ascii-table.com/ascii.php).
 
-    > The original ASCII standard only included 128 characters, as you can see in the table, linked above. Obviously, that does not account for all characters in all spoken languages in the world. A second version of the standard; **extended-ASCII**, includes an additional 128 characters to give us a total of 256 characters. This standard includes letters with accent, found in languages like French. 
+    > The original ASCII standard only included 128 characters, as you can see in the table, linked above. Obviously that doesn't account for all characters in all spoken languages in the world. A second version of the standard; **extended-ASCII**, includes an additional 128 characters to give us a total of 256 characters. This standard includes letters with accent, found in languages like French. 
 
 Given the ASCII and extended-ASCII tables, if you wanted to store the letter A, you find its decimal number; 65, on the table, convert that to binary digits (bits) and store those digits in memory.
 
