@@ -112,8 +112,8 @@ _Unicode Character Set_
 
 The collection of characters in a given character standard is called a **character set**. As you might have noticed, we only need exactly 8 bits (or 1 byte) to store the largest character on the extended-ASCII table. This means the ASCII standard is an 8-bit character set. 
 
-    > Collectively, ASCII and extended-ASCII has characters with decimal values from 0 to 255, where 0 is the smallest character and 255 is the largest character. 255 to binary is 1111 1111. When all the bits are 1 (or on) at any memory location, we say that location is full. So 255 will fill up any memory location where it is stored. Since it is the largest ASCII value and it is exactly 1 byte (8 bits = 1 byte), we say ASCII is an 8-bit standard.
-        
+> Collectively, ASCII and extended-ASCII has characters with decimal values from 0 to 255, where 0 is the smallest character and 255 is the largest character. 255 to binary is 1111 1111. When all the bits are 1 (or on) at any memory location, we say that location is full. So 255 will fill up any memory location where it is stored. Since it is the largest ASCII value and it is exactly 1 byte (8 bits = 1 byte), we say ASCII is an 8-bit standard.
+
 Because both ASCII standards only account for 256 characters, it is obvious they do not account for all characters in most spoken languages. As such, the **Unicode** standard was created. The Unicode standard is a superset of the ASCII standard, meaning all the characters found in ASCII can be found in Unicode, plus a bunch more.
 
 The Unicode character set has characters that require up to 32-bits (or 4 bytes). The emojis we love so much are also defined in the Unicode character set. For example, 😊 has the decimal value 4,036,991,114, which is equivalent to the following bits: 11110000 10011111 10011000 10001010. As you can see, we need up to 32 bits to represent our beloved smiling face with smiling eyes emoji. There is no way we could store emojis with the ASCII standard.
