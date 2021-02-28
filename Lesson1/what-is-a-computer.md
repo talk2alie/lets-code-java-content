@@ -91,7 +91,7 @@ For example, if you entered the number 25 on your keyboard, the computer will co
 
 Luckily for us, a group of really smart people came together a long time ago and came up with something called **ASCII** (American Standard Code for Information Interchange). ASCII is a standard which assigns a decimal number to a given character. For example, The capital letter A is assigned the decimal number 65, the capital letter B is assigned the number 66, and so forth.
 
-You can find the full ASCII table [here](http://ascii-table.com/ascii.php).
+You can find the full ASCII table [here](http://ascii-table.com/ascii.php See ASCII table).
 
 > The original ASCII standard only included 128 characters, as you can see in the table, linked above. Obviously that doesn't account for all characters in all spoken languages in the world. A second version of the standard; **extended-ASCII**, includes an additional 128 characters to give us a total of 256 characters. This standard includes letters with accent, found in languages like French. 
 
