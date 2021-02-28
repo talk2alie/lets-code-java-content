@@ -119,7 +119,6 @@ Because both ASCII standards only account for 256 characters, it is obvious they
 The Unicode character set has characters that require up to 32-bits (or 4 bytes). The emojis we love so much are also defined in the Unicode character set. For example, 😊 has the decimal value 4,036,991,114, which is equivalent to the following bits: 11110000 10011111 10011000 10001010. As you can see, we need up to 32 bits to represent our beloved smiling face with smiling eyes emoji. There is no way we could store emojis with the ASCII standard.
 
 😊 = 4,036,991,114 = 11110000 10011111 10011000
-        
 _Emoji is a whole new language that has its own set of characters, just like English or Spanish._
     
 _Abstraction_
@@ -135,7 +134,6 @@ Lucky for you, your computer employs a concept known as **abstraction**. Abstrac
 FYI, abstraction is all around us; not only in computer science. It is, for instance, the reason you can learn to drive a car without worrying about how a car works internally. It is also the reason that when you learn to drive one car, you can pretty much drive any other car in the same category. If you had to think about what happens in a car's engine every time you pressed the gas, you probably would never drive. So abstraction is a very important concept not only in computer science, but in all our lives.
 
 ![Porsche](media/porsche.jpg)
-
 _As beautiful and straightforward as the interior of this Porsche Cayenne looks, it is an abstraction of really complex operations that occur in a combustion engine._
 
 ### 1.1.3 Output Devices
