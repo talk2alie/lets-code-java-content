@@ -161,36 +161,62 @@ Just like your long term memory, data stored on a secondary memory is there fore
 	
 **Examples of secondary memories include:** Hard Disk Drives, Solid State Drives (SSDs), Memory Card, Flash Drive, etc.
 
+### 1.1.4 Test your knowledge
 
+## 1.2 Software
 
+A **software** is any program (or app) that runs on your computer. A **program** is simply a series of instructions that directs your computer to accomplish a task. Computer software are the reason computers are so versatile, and are used across every industry. We will visit this idea in more detail later. Computer software come in two flavors; **System Software** and **Application Software**.
 
+### 1.2.1 System Software
 
+![Variations of System Software](media/operating-systems.png)
 
+The **system software** is a set of programs that run at the lower levels of your computer system, to manage the hardware devices that make up the system. System software are the reason that even though hardware devices are made by different manufacturers, they all seem to work together seamlessly as a unit. Without the system software, the entire computer system would be a giant mess.
 
+System software come in the form of:
 
+1. **Operating System**
+
+    These are software found on your computer when you buy it. They manage the operations of the hardware devices and provide tools that allow for multi-tasking. In other words, they make it possible for you to listen to Pandora on your computer while writing your Philosophy paper in Microsoft Word, on the same computer.
 	
+    The most common Operating Systems are: **Windows**, **Mac OS**, **Android** and **Linux**.
+	
+    Regardless of the operating system you have installed on your computer, every operating system acts as a traffic police, dictating which application software on your computer can gain access to resources like storage, audio or video devices.
+	
+    The operating system performs this task by rapidly allocating and reclaiming resources from active applications on your computer. So while it may seem you have multiple apps running simultaneously; in reality, the operating system is switching between them, saying go to one and stop to the other.
 
+2. **Firmware** and **Driver**
 
+    These are specialized types of operating systems that come with computing devices like graphic cards, printers, cameras, etc.  They are similar to operating systems, except that they are made specifically for the device with which they come. 
 
+	For example, my Canon EOS 5D Mark IV came with a firmware made specifically for it. While I could get a copy of Windows and install it on any computer that meets its hardware requirement, I could not get a copy of the EOS 5D's firmware and install it on any other camera. 
 
+### 1.2.2 Application Software
 
+![Variations of Application Software](media/application-software.png)
 
+These are the software you actually use. They are written to solve specific problems and for use in specific industries. When you hear the statement, "there's an app for that," it actually means there is an application software for that. They are called application software because they are meant to be applied to different aspects of your life. This is the category of software that makes computers so versatile. Computers appear to be specialized because their application software  is specialized.
 
+Application software come in 3 main categories:
 
+1. **Desktop**
 
+    These are application software meant to be used on desktop or industrial systems. Another name for them is Line of Business software. Using these applications usually require physical input and output devices like keyboards, mice, printers, etc.
 
+    E.g. Photoshop, Microsoft Word, Web browsers like Chrome, Firefox, etc.
 
+2. **Mobile**
 
+    These are application software meant to be used on mobile devices like smartphones and tablets. One main characteristic of this category of software is that they are distributed in app stores, like Google's Play Store for its Android operating system. Mobile applications are mostly meant to be used with natural input like your fingers.
 
+    E.g. Candy Crush, Facebook, Angry birds, Instagram, etc.
 
+3. **Internet of Things (IoT)**
 
+    These are the kind of software you find on refrigerators and microwave ovens from companies like Samsung and LG. They are meant to work on devices that are connected, 24/7, to the internet.
 
+Whether you are using a desktop or a mobile application software, each of these are meant for specific industries and for specific operating systems. For example, you cannot take a desktop application meant to be used on a Windows computer and directly install it on a MacOS computer. Similarly, you cannot take a mobile application meant for an Android phone or tablet and directly install it on an iPhone or iPad. The reason for this is very technical and we will learn all about it in future lessons.
 
+There is a 3rd category of application software. These are **cross-platform** applications or Web applications. This category of applications run in your computer's web browser. Consequently, they work on any operating system or platform. Example of a cross platform application is your favorite website.
 
-
-
-
-    
-
-
-
+### 1.2.3 Test your knowledge
