@@ -67,7 +67,7 @@ A final way to express an algorithm is to write it in what is known as **pseudoc
 
 For example, I could have expressed the mean algorithm as follows:
 
-```json
+```java
 1. Declare numbers
 2. Set numbers = 85, 88, 20, 25, 99, 200
 3. Declare sum
@@ -91,3 +91,109 @@ If you remember from lesson 1, I said when you launch an app on your computer, i
 At this point, you are like:
 
 ![You say what?](media/you-say-what.png)
+
+**Ah relax!** I'm not really suggesting you learn to write an entire program in binary, on top of all the other junk you have to learn. Come on! Learning to write an entire program in binary is impossible!
+
+I'm merely pointing out the fact that you and your computer speak different languages. To foster communication between you two, given how cozy you are with one another (😂), you need a middle ground. You need to be able to express your algorithms in a language that is easier for you to learn and understand, and that can be translated into binary code.
+
+![Avengers of programming languages](media/avengers-of-programming-languages.png)
+
+### 2.1.2 Test your knowledge
+
+## 2.2 Programming Languages
+
+To get your computer to do anything, you must tell it what to do in the form of an algorithm, expressed in a computer program. Your program though, can't simply be written in plain English or your native language, because there is a language barrier between you and your computer.
+
+> A programming language is a formal, non-spoken, language used to express algorithms in a computer program. 
+
+Because of this language barrier, you must learn, at least, one programming language. The original programming language is the **binary language (or machine code)**; the computer's own language. Back in the day, when we first started writing computer programs, we tried writing programs in binary. 😂!! It did not go well! The process was ridiculously tedious! Not to mention, it was also terribly error prone. Most importantly, it was very limiting! Writing complex programs was impossible! This is mainly because the binary language is very far away from spoken languages. It's all 1s and 0s, and it's very difficult to learn and tedious to write:
+
+```java
+0 1 0 0 1 0 0 0 0 1 1 0 0 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 0 1 1 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 1 1 1 0 1 1 0 1 1 1 1 0 1 1 1 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 0 1
+```
+
+Consider the program above, it simply prints, "Hello, World!" to your screen. Imagine writing a significantly more complex program in binary. Could you do it?
+
+![Worried Scientist](media/worried-scientist.png)
+
+### 2.2.1 Assembly Language
+
+Because of the difficulty in learning and using the binary language, **assembly language** was created! In assembly, you write your program using mnemonics (short forms of words). Yeah I know what you're thinking. No, it wasn't the same as writing LOL in text messages. It was similar, but not the same.
+
+For example, here is the "Hello, World!" program, from above, re-written in assembly language.
+
+```java
+global  _main
+    extern  _printf
+
+    section .text
+_main:
+    push    message
+    call    _printf
+    add     esp, 4
+    ret
+message:
+    db  'Hello, World', 10, 0
+```
+
+As mentioned above, this program does exactly the same thing as the previous one, but the assembly code is more readable. If you look closely, you can even recognize instructions like "push," "add," etc. You can even recognize the text it is printing. Because of your ability to recognize these words, assembly was relatively easier to learn. As a result, it became very popular.
+
+When you write your code in assembly, your computer no longer understands it, because again, your computer only understands binary. To solve that problem, the **assembler** was invented. 
+
+> An **assembler** is a tool (another computer program) that sits between your assembly code and your computer's CPU. You write your program in assembly, the assembler assembles (translates) your program's code into machine code (binary), and your computer can happily execute your code.
+
+![An assembly assembling code](media/code-assembly.png)
+
+> A file containing computer program code is called a **source code file**
+
+While assembly language is relatively easier to learn, it has the same drawbacks as machine code when you start writing more complex programs. 
+
+Collectively, machine code and assembly are known as **low level programming languages**. They are so-called because they are very close to your computer's CPU, and their closeness to your computer's CPU is why they are difficult to learn and to use.
+
+### 2.2.2 Higher Level Programming Languages
+
+You have come this far with me and so, you know the struggle, 🤷🏿‍♀️. We tried writing code in binary, but there were too many 1s and 0s for us to comprehend. We then moved on to assembly, but it was too cryptic for us.
+
+![Nervous Dude](media/nervous-dude.png)
+
+Now, what do we do? Queue in higher level programming languages. These are programming languages that are very close to spoken languages. In fact, they are so close to spoken languages that you can recognize every character and every word in their programs. For example, here is the same "Hello, World!" program, re-written in a higher level programming language.
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println ("Hello, World!");
+    }
+}
+```
+
+![Happy Student](media/happy-student.png)
+
+**Yay, indeed!**
+
+With higher level programming languages, you can write your code in a language that is very close to a spoken language, and have your code translated to assembly language, which an assembler can translate to machine code.
+
+> A **compiler** is a computer program (a tool) that compiles (translates) your code written in one programming language; usually a higher level language, into another, usually lower level, programming language.
+
+![Higher Level Languange to Lower Level Language](media/hll-to-lll.png)
+
+Most modern higher level languages come with compilers that know how to compile their code directly to machine code, eliminating the extra steps:
+
+![Compiler to Machine Code](media/compiler-to-machine-code.png)
+
+#### 2.2.2.1 Higher Level Language Paradigms
+
+Once we figured out how to create compilers, there became a massive proliferation of higher level programming languages. In fact, there have been several new higher level programming languages as recent as 2014. We are introducing new higher level programming languages all the time. Because of this massive proliferation, we have organized higher level programming languages into paradigms. 
+
+> Languages in the same paradigm usually share similar characteristics and features.
+
+![Higher Level Programming Languages](media/languages.png)
+
+I'm not going to bore you with the details of all the different paradigms. I don't want you to hate me before the semester even begins, 😁. If you are really interested (good for you!), you can look them up [here](https://cs.lmu.edu/~ray/notes/paradigms/ "Programming Lanaguage Paradigms").
+
+For the benefit of this class, we will discuss the **Object-Oriented Programming** language paradigm.
+
+#### 2.2.2.2 Object-Oriented Programming (OOP) Languages
+
+The earliest programming languages were **procedural**. They expressed programs in the form of one or more procedures.
+
+> A **procedure** is a set of related programming statements that perform a task. To solve their problem, they can accept input from a user, perform actions on that input, and pass data around to other procedures.
