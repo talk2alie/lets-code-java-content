@@ -197,3 +197,173 @@ For the benefit of this class, we will discuss the **Object-Oriented Programming
 The earliest programming languages were **procedural**. They expressed programs in the form of one or more procedures.
 
 > A **procedure** is a set of related programming statements that perform a task. To solve their problem, they can accept input from a user, perform actions on that input, and pass data around to other procedures.
+
+![Procedures Diagram](media/procedures.png)
+
+One important thing I want you to note about the procedural style is that it separates the data from the procedures that operate on the data. This is important because if you look around you, this is not how things exist in nature.
+
+Consider you, for instance. You have hair color, eyes, height, weight, complexion, etc. All the things that identify you are data about who you are. You also have procedures. You eat, drink, run, play (hopefully), dance, etc. All the things you do are actions (or procedures) you perform on a daily basis. It would be weird if nature had separated your data (attributes) from your procedures (methods).
+
+Object-oriented programs model program elements after real word objects. So the central idea in an OOP program is the **object**.
+
+> An **object** is a software entity that contains both data and procedures, **encapsulated** as a single entity. The data contained in an object are its **attributes (or properties or fields)**. The procedures, or actions of an object are its **methods**.
+
+One cool thing about OOP is that it enforces acceptable social norms, without you even asking. Consider your age. No one, besides your closest family members (people **within** your circle), knows it unless you want them to. In the real world, we call this **privacy**. In OOP terminology, we call it **information (or data) hiding**. You **encapsulate (or hide)** your birthday from the world. The only way they get to know it is by asking you. When they do, you can decide to either show them your real ID (the one your government gave you), or you can show them the one you had made to show the bouncer at your favorite night club. It's totally up to you! 😂.
+
+In OOP, you store and hide your object's data or attributes in fields (another program element) and you provide public methods (the procedures or actions of the object) that grant the outside world access to those data. The only representation of your object's data the public gets to see is whatever you return from those methods. It could be a true representation of the hidden data, it could also not be. Totally up to you! 😂. Within those methods, you can also enforce rules that restrict how those data can be retrieved and/or modified.
+
+![Object Diagram](media/object.png)
+
+_**Image:** Courtesy of Starting out with Java (T. Gaddis)_
+
+#### 2.2.2.3 Principles of Object-Oriented Programming (OOP)
+
+Languages in the OOP paradigm operate on four basic principles. Each principle enforces protection of an object's data and provides clear paths to using the object without really caring about how that object is designed internally (sounds familiar?).
+
+The four principles are: **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
+
+1. **Encapsulation**
+    A mechanism for hiding the data contained within an object and providing restricted access to those data through the object's procedures (or methods).
+	
+	You already know this one. Remember the age example earlier? Your age is, by default, hidden from the public. We have a restricted access to your age through your inner circle. Only you or people within your inner circle can disclose your age to the outside world. In this example, your age is your data and your inner circle is your method (through which we can access your age).
+
+    ![Encapsulation Lady](media/encapsulation-image.png)
+
+2. **Abstraction**
+    A mechanism by which the outside world interacts with the public interface (or abstraction) of an object without caring about or needing to know anything about the internals of the object.
+	
+	You already know this one, too. Consider the computer you are using to read this text right now. Do you really care what happens when you press a key on the keyboard? Most people don't! And I bet you don't, either. Yet, you are still productive using your computer. That is possible because of abstraction.
+
+    ![Abstraction Computer](media/abstraction-image.png)
+
+3. **Inheritance**
+    A mechanism for defining a hierarchical relationship between objects. This relationship is usually defined as an is-a or a has-a relationship, because it specifies the type (is-a) or composition (has-a) of an object.
+	
+	Consider the image below:
+
+    ![Inheritance Image](media/inheritance-image.png)
+
+    Pay close attention to the Mammals column. If you noticed, a dog **is-a** mammal, a dolphin **is-a** mammal. You **are-a** mammal. So, there is clearly an **is-a** relationship between all mammals. In addition, all mammals will share similar traits (data) and behaviors (procedures).
+	
+	Similarly, in OOP, objects can inherit data (attributes) and behavior (methods) from one another. The object inheriting the data and behavior is called the child object (or subtype or subclass) and the object from which data and behavior are being inherited is called the parent object (or base type or base class). Think of the relationship between you and your parents.
+
+    ![Inheritance Family](media/inheritance-family.png)
+
+4. **Polymorphism**
+    A mechanism whereby a single object can take many forms depending on its inheritance hierarchy. 
+	
+	For example, depending on the context, you can think of and discuss a dolphin purely as an animal. There are other contexts in which you can think of and discuss it purely as a mammal. There are yet other times when you can think of and  discuss it as itself; a dolphin. In each context, a dolphin is still a dolphin, yet it's also an animal and a mammal.
+	
+	Notice, in the context of discussing a dolphin as an animal, you are confined to considering only traits and behaviors it shares with all other animals. You can't think of traits and behaviors that are unique to dolphins in this context. As soon as you start considering traits and behaviors outside of this context, then the dolphin becomes something else. Cool, right 🙌!
+
+
+
+
+
+
+
+### 2.2.3 Test Your Knowledge
+
+## 2.3 The Java Programming Language
+
+In this semester, you will be learning the basics of programming with Java. Java is an OOP language that was developed at Sun Microsystems (now part of Oracle), in 1991 by James Gosling. It heavily borrows elements from previous OOP languages like C and C++. The good news is, Java is pretty easy to learn. It shares many traits and elements with other programming languages, and specifically OOP languages.
+
+### 2.3.1 Elements of the Java Language
+
+All programming languages share some common elements. To study them, let's review the following Java code:
+```java
+import java.text.NumberFormat;
+import java.util.Locale;
+
+/**
+ * Calculates pay for a person's payroll
+ */
+public class Payroll {
+    public static void main(String[] args) {
+        System.out.println();
+
+        // Specify the name of an employee
+        String employee = "Abdulrasheed Oketona";
+
+        // Number of hours the employee worked
+        int hoursWorked = 40;
+
+        // Amount paid per hour
+        double hourlyRate = 80.0;
+
+        // Calculate pay
+        double grossPay;
+        grossPay = hoursWorked * hourlyRate;
+
+        // Format the user's pay according to US dollars since we are in the US
+        Locale usLocale = new Locale("en", "US");
+        NumberFormat usFormatter = NumberFormat.getCurrencyInstance(usLocale);
+        String formattedGrossPay = usFormatter.format(grossPay);
+
+        // Print result
+        System.out.printf("%s made %s this week\n", employee, formattedGrossPay);
+        System.out.println();
+    }
+}
+```
+
+| **Program Output:** | `Abdulrasheed Oketona made $3,200 this week` |
+| :--: | :--: |
+
+Every programming language has the following elements:
+
+| Language Elements | Desctiption |
+| :-- | :-- |
+| Key Words |  These are words that have a special meaning in the programming language. They may be used for their intended purpose only. Key words are also known as reserved words. All Java keywords must be in lowercase. <br /> <br /> Example of keywords in the above program are: <br /> `public`, `class`, `static`, `void`, `int`, `double` <br /><br />Java provides several keywords to help with building different programming elements in your program. You can find an exhaustive list of those keywords [here](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html).|
+| Operators | Operators are symbols or words that perform operations on one or more operands. An operand is usually an item of data, such as a number.<br /> <br /> We use operators all the time, including the arithmetic operators we recognize. The following are operators in the above code: <br /> `{ }`, `( )`, `=`, `*` |
+| Punctuation | Most programming languages require the use of punctuation characters. These characters serve specific purposes, such as marking the beginning or ending of a statement, or separating items in a list. <br /><br /> Punctuations work in Java similar to how they work in spoken language. Examples of punctuations in the above code are the semicolon (`;`) and the comma (`,`). <br /><br />The semicolon is used to terminate a statement, while the comma is used to separate items in a list; like separating `"en"` and `"US"` on line 24.|
+| Programmer-Defined Names | Unlike key words, which are part of the programming language, these are arbitrary words or names you choose to name program elements, like variables, classes, methods, etc. (You will learn about all these). Programmer-defined names are often called identifiers.<br /><br /> E.g. of programmer-defined names in the above code are: <br />`Payroll`, `employee`, `hoursWorked`, `hourlyRate`, `grossPay`, `usLocale`, `usFormatter`, `formattedGrossPay`|
+| Syntax | These are rules you must follow when you write your programs in a given language. Syntax dictates how key words and operators may be used, and where punctuation symbols must appear. <br /><br /> Think about the syntax of your native language. There are specific ways you must arrange language elements for thoughts you express to make sense to others. In programming, your thoughts have to make sense to the programming language's compiler.
+ |
+
+### 2.3.2 What is a Java program made of?
+
+You have already seen what the Java language itself is made of. So, a Java program is simply a text file containing your algorithms, expressed in Java. All Java source code files must have the extension `.java`. For example, the Payroll program you saw earlier is saved in a file called `Payroll.java`.
+
+Inside a Java file are the following program elements:
+
+1. **Class**
+    Earlier I said an object is the central concept in OOP languages. As Java is an OOP language, it stands to reason that an object is the central concept in Java as well. 
+
+    > A **class** is a Java source code file where you specify the fields (data) and methods (procedures) an object can have. Essentially, a class is a blueprint for an object. A Java program is a source code file containing a class. An executable Java program is a class that has a special entry point method called, **main**.
+
+    I said an object has data and procedures. A class is where you specify the data and procedures of an object. Data is represented in the class as fields. Procedures are represented in the class as methods. A class must have a name you get to choose. Make sure to always name your class according to the object it represents.
+
+2. **Fields**
+    The data an object contains describes or characterizes the object. In Java code, you represent this data with a field. 
+
+    > A **field**, in Java, is a global variable. A **variable** is a named memory location that stores an object's data or a reference to another memory location that stores the object's data.
+
+    Whenever you want to represent data in Java, you create a variable. Most of the times, you will create a variable inside a method (or procedure). However, when that data belongs to an object, you create it outside of all the methods in the class. When you create a variable inside a method, it is a local variable, but when you create it outside all the methods in your class, it is a field.  
+
+    A variable must have a **data type**. A data type specifies what kind of value (text, number, etc.) a variable can store. The data type also defines how much space your computer must allocate in its memory to store the variable's data.
+
+    Fields and variables have names you get to choose. You must always name your fields and variables after the data or object attribute they store.
+
+3. **Methods**
+    You already know that a method is another name for a procedure, which you know is a series of related statements that performs a task. 
+
+    > A **statement** is a complete instruction that causes your computer to perform an action. A statement can contain one or more expressions. An **expression** is a combination of program elements (variables, operators, etc.) that evaluate to a value
+
+    Inside a method is where all the fun happens. A method is essentially a sequence of statements enclosed in a **code block**. A code block begins with an open curly brace; {, and ends with a closing curly brace; }. You can also think of a method as a named code block. Methods have a name you get to choose. You must always name your methods based on what tasks they perform.
+
+    Methods can accept values. They can also return values. You can also add **comments** in your code to explain to other developers what your thoughts were when you wrote the code. The computer will ignore your comments.
+
+    Let's take a look at the Payroll program again to solidify your understanding of these program elements.
+
+    ![Payroll Program Explained](media/payroll-image.png)
+
+
+
+
+### 2.3.3 Test Your Knowledge
+
+## 2.4 Your First Java Program
+
+Please follow the instructions below to write your first Java program. All we want this program to do is print, `"Hello, World!"`, to your screen. 
+
