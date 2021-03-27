@@ -161,7 +161,6 @@ Just like your long term memory, data stored on a secondary memory is there fore
 	
 **Examples of secondary memories include:** Hard Disk Drives, Solid State Drives (SSDs), Memory Card, Flash Drive, etc.
 
-### 1.1.4 Test your knowledge
 
 ## 1.2 Software
 
@@ -218,5 +217,3 @@ Application software come in 3 main categories:
 Whether you are using a desktop or a mobile application software, each of these are meant for specific industries and for specific operating systems. For example, you cannot take a desktop application meant to be used on a Windows computer and directly install it on a MacOS computer. Similarly, you cannot take a mobile application meant for an Android phone or tablet and directly install it on an iPhone or iPad. The reason for this is very technical and we will learn all about it in future lessons.
 
 There is a 3rd category of application software. These are **cross-platform** applications or Web applications. This category of applications run in your computer's web browser. Consequently, they work on any operating system or platform. Example of a cross platform application is your favorite website.
-
-### 1.2.3 Test your knowledge
