@@ -368,7 +368,7 @@ Please follow the instructions below to write your first Java program. All we wa
 1. Open a text editor on your computer (For Windows, this could be Notepad. For Mac, this could be TextEdit)
 2. In your text editor, please type the following code:
    ```java
-   pubblic class MyFirstJavaProgram {
+   public class MyFirstJavaProgram {
        public static void main(String[] args) {
            System.out.println("Hello, World!");
        }
