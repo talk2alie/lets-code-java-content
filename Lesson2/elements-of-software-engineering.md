@@ -98,8 +98,6 @@ I'm merely pointing out the fact that you and your computer speak different lang
 
 ![Avengers of programming languages](media/avengers-of-programming-languages.png)
 
-### 2.1.2 Test your knowledge
-
 ## 2.2 Programming Languages
 
 To get your computer to do anything, you must tell it what to do in the form of an algorithm, expressed in a computer program. Your program though, can't simply be written in plain English or your native language, because there is a language barrier between you and your computer.
@@ -262,7 +260,7 @@ The four principles are: **Encapsulation**, **Abstraction**, **Inheritance**, an
 
 
 
-### 2.2.3 Test Your Knowledge
+
 
 ## 2.3 The Java Programming Language
 
@@ -361,7 +359,7 @@ Inside a Java file are the following program elements:
 
 
 
-### 2.3.3 Test Your Knowledge
+
 
 ## 2.4 Your First Java Program
 
