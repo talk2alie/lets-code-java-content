@@ -367,3 +367,180 @@ Inside a Java file are the following program elements:
 
 Please follow the instructions below to write your first Java program. All we want this program to do is print, `"Hello, World!"`, to your screen. 
 
+1. Open a text editor on your computer (For Windows, this could be Notepad. For Mac, this could be TextEdit)
+2. In your text editor, please type the following code:
+   ```java
+   pubblic class MyFirstJavaProgram {
+       public static void main(String[] args) {
+           System.out.println("Hello, World!");
+       }
+   }
+   ```
+   > You **MUST** make sure to type the code exactly as you see it
+3. Save the file as `MyFirstJavaProgram.java`. 
+   > You **MUST** make sure the file nam matches the name of your program (or the class). In this case, the class' name is `MyFirstJavaProgram`. Therefore, the file name must be the same, plus the `.java` file extension. (Make sure to remember where you saved the file)
+   
+At this point, you have written your first program. However, you are unable to execute it. To execute your code, you need to learn more about how Java works. Remember that Java is a higher level programming language. As such, it needs to be compiled into machine code before your computer is able to execute it.
+
+### 2.4.1 Compiling and Executing a Java Program
+
+If you remember from the last lesson, your computer is managed by an operating system. The operating system is very important in ensuring your computer and all its components function properly. When you write a program, you **must** target a specific operating system; usually, the one on wich you are writing your code. For example, if you wrote the above code on your Windows computer, your program will execute only on Windows computers. If you want your program to work across multiple operating systems, you **must** write code for each operating system, and the programming language you are using must provide a compiler for each of those operating systems. In that case, your code will have to be compiled separately for each of those operating systems. As you can imagine, it will become tedious, really fast! Not only that, compilers are very complex programs, and they are very difficult to write.
+
+The Java creators solved this problem by creating the **Java Virtual Machine (JVM)**. You can think of the JVM as a virtual CPU that knows how to execute code written in a new language the Java creators invented, called **byte code**. The Java compiler compiles your Java code into byte code. The byte code is installed on the JVM. The JVM then generates the appropriate machine code required for your operating system. So, instead of providing a compiler for each operating system, the Java creators provide a JVM, which is a simpler program to write, for each operating system. As a result, you write your Java program once, and it will execute on any operating system for which there is a JVM.
+
+![How the JVM works](media/jvm-operation.png)
+
+_Image: courtesy of Starting out with Java (T. Gaddis)_
+
+Now that you know how Java handles compiling your code, it's time to see it in action. I am guessing you don't already have the **Java Software Development Kit (SDK or JDK)** installed on your system. So we will go ahead and install it. 
+
+> The **SDK**, as its name suggests, is a kit that contains all the tools you need to write a Java program, including the Java compiler, the JVM and thousands of pre-written code you can use in your own Java programs. The `Locale` class from the Payroll program earlier is part of the SDK
+
+To install the SDK, please follow the instructions below:
+
+1. Go to the Oracle website, [here](https://www.oracle.com/java/technologies/ "Download the Java SDK").
+   ![SDK Website](media/sdk-website.png)
+2. Click **Download now** in the lower right corner
+   ![Download SDK](media/download-button.png)
+3. Click **JDK Download**
+   ![JDK Download](media/jdk-download.png)
+4. Scroll down to Java SE Development Kit and pick the right installer for your operating system (I have selected the Windows x64 Installer)
+   ![Operating System JDK](media/os-jdk.png)
+5. Accept the terms (If you want, you can read it before you accept it) and click Download
+   ![Accept Terms](media/terms-acceptance.png)
+6. Once it's done downloading, launch the installer by clicking (double clicking) it and following the prompts
+7. Once you are done, close the installer
+
+> **NOTE:** At the time of this writing, the website looked like the images above. It is very likely that by the time you are reading, the website interface would have changed. Just make sure to look for the SDK on the website.
+
+Now that the SDK is installed, you want to check if it was installed properly. To check that, open your prompt (PowerShell or CMD on Windows, Terminal on Mac).
+
+I have opened my PowerShell, since I'm on Windows:
+
+![PowerShell Prompt](media/prompt.png)
+
+1. At the prompt, the blinking cursor in your terminal, type:
+
+   `java --version`
+
+	You should see the version of the SDK you just installed
+    ![Java Version](media/java-version.png)
+
+    If you saw something like that, it means you are good.
+2. Open your file explorer and find the directory where you saved your first program, `MyFirstJavaProgram.java`
+
+   (I saved it inside my class folder at this location: `C:\Repos\spring2021csc1051\MyFirstJavaProgram`) 
+3. At the prompt, type:
+
+   `cd C:\Repos\spring2021csc1051\MyFirstJavaProgram`
+
+    > **NOTE:** You can put the text after `cd` in quotes if there are spaces and make sure it's the path to the directory where you saved your first program
+4. Press **Enter** on your keyboard
+
+   Your prompt should now change to that directory (cd means Change Directory)
+   ![CD Prompt](media/cd-prompt.png)
+5. At the new prompt, type:
+
+   `ls`
+
+   > If you are using `cmd`, instead of PowerShell, you will type `dir` instead of `ls`
+
+   > **NOTE:** That is small letter L. That command lists all files inside the current directory. You should see your source code file in there
+
+   ![LS - Prompt](media/ls-prompt.png)
+
+6. At the prompt, type:
+
+	`javac MyFirstJavaProgram.java`
+
+	> **NOTE:** `javac` is the Java compiler. This command instructs the compiler to compile your source code file, in this case, `MyFirstJavaProgram.java`, into bytecode.
+7. At the prompt, type:
+
+	`ls`
+
+    > If you are using `cmd`, instead of PowerShell, you will type `dir` instead of `ls`
+	
+    > If you observe, you will see in addition to the `MyFirstJavaProgram.java` file, there is a new file named `MyFirstJavaProgram.class`. That is the bytecode file to which the Java compiler has compiled your code.
+	
+	At this point you have compiled your code. The next step is to ask the JVM to execute it. Remember that the compiler compiles your code into bytecode. It is the JVM that will generate the necessary Machine code, which your computer's CPU can execute.
+8. At the prompt, type:
+
+	`java MyFirstJavaProgram`
+
+	You should see:
+
+    ![MyFirstJavaProgram Output](media/hello-world-output.png)
+
+	> **NOTE:** You do not specify the `.class` extension. The java tool can only execute the `.class` files. So it will pick up the correct file to execute
+
+## 2.5 Setting up your Development Environment
+
+Sure you can write your Java program using the built-in text editor on your computer. But should you?
+
+![You Shouldn't](media/you-shouldnt.png)
+
+**Listen to the kid!** You really shouldn't. 
+
+This is because text editors are not designed for writing code. As such, they can't automate processes involved in the development process. For example, think about the process you just went through to write your first program. Here is the thing, you will have to repeat several parts of that process many times, pretty much any time you make a change in your code, before your program is ready for prime time. Do you really want to go through all that every time you make a tiny change in your code? 🤷🏾‍♂️
+
+Another reason you should ditch built-in text editors as coding tools is they don't notify you, in real time, when you make a mistake in the language syntax. If you have ever used Microsoft Word for writing papers, you know that it underlines misspelled words or incorrect phrases. A proper editor for coding should be able to do that when your arrangement of the Java language elements violates the language's syntax. Unfortunately, built-in text editors can't do that.
+
+Let me show you what I mean:
+
+1. Open your `MyFirstJavaProgram.java` file in your text editor
+2. Remove the semi-colon at the end of the line that begins with `System.out.println`
+   ![Introducing Error](media/errorin-code.png)
+3. Save the file
+
+Removing that semi-colon is like ending a sentence without the appropriate punctuation in the English language. You have effectively violated Java's syntax rules. But as you can see, your built-in text editor shows no sign that you have broken your code. It lets you go on as if nothing is wrong. 
+
+To show you that something really is wrong, go back to your command prompt and attempt compiling that code again.
+![Bug in Prompt](media/bug-in-prompt.png)
+
+To be really productive, you should be able to see an error like this in real time. As you write code, you are bound to make mistakes. In software engineering terms, a mistake is called a **bug**.
+
+| ![Bug in code](media/bug.png) | Hi, I am a bug! <br><br> Since I have the tendency to appear in places I am not welcomed, computer scientists thought it would be funny to use my name to represent any error that occurs in their code. In fact, they loved the idea so much, they named a whole process after me.<br><br> _The process of finding and fixing errors in a computer code is called Debugging._ 😂 <br><br> Isn't that a hoot? |
+| :--: | :--:|
+
+There are basically two kinds of bugs that could occur in your Java program: **compile-time (or syntax) error** and **run-time (or logic) error**.
+
+A **compile-time error** occurs when you violate the Java syntax. The Java compiler, when used in a proper code editor _(a text editor designed specifically for editing computer code)_ or an **IDE _(an advanced code editor)_**, can spot such an error and let you know of its occurrence in real time. Mostly, you will see a visual cue as shown below:
+
+![Code editor visual cue](media/visual-cue.png)
+
+The red squiggly makes it obvious there is a problem. In fact, if you hover your mouse over that red squiggly, the code editor will tell you what that problem is:
+
+![Editor Error](media/editor-error.png)
+
+A **run-time error** occurs when you make a mistake that is not syntax related. It's difficult to find such a mistake during the writing of your program (or during compile time). You can only spot it when your program is running (hence, run-time error). An example of a run-time error is when you misspell a word in a display message, in your code, or when you make an error in mathematical calculations. 
+
+**Installing VS Code**
+
+**Visual Studio Code (or VS Code)** is a code editor for all kinds of programming languages. I have chosen it because it is easy to use, and it can be used on both Windows and Mac OS.
+
+1. Please navigate to this [link](https://code.visualstudio.com/docs/languages/java "Install VS Code")
+2. Scroll down to the installers and click on the appropriate link for your Operating System
+   ![VS Code Installers](media/vs-code-installers.png)
+   > **NOTE:** If you are using an OS other than Windows and Mac, please follow the instructions below the installers
+3. Please follow the prompts to complete the installation
+4. Once the installation is done, leave the checkbox ticked and click Finish
+
+   ![VS Code Installer](media/vs-code-finish.png)
+
+Let's take a moment and review the VS Code interface:
+
+![VS Code Home](media/vs-code.png)
+
+The screen you are looking at is the home screen. Click the **Open folder** button on the home screen to locate and open the folder where you saved the `MyFirstJavaProgram.java file`.
+
+![VS Code View](media/vs-code-views.png)
+
+If you don't see the Run button, right click anywhere in the file and click Run. We will explore what the Debug button does later on in the semester.
+
+That's it! You are all set to start coding with VS Code and Java. Play around with the VS Code editor and familiarize yourself with its features. You can find VS Code tutorials [here](https://code.visualstudio.com/docs/getstarted/tips-and-tricks "VS Code Tips and Tricks"). 
+
+Another cool thing I love about VS Code is that you can customize it to match your style. Look up how to do that [here](https://code.visualstudio.com/docs/getstarted/themes "Changing VS Code theme"). 
+
+Cheers!
+
+
