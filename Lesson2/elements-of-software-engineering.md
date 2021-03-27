@@ -376,7 +376,7 @@ Please follow the instructions below to write your first Java program. All we wa
    ```
    > You **MUST** make sure to type the code exactly as you see it
 3. Save the file as `MyFirstJavaProgram.java`. 
-   > You **MUST** make sure the file nam matches the name of your program (or the class). In this case, the class' name is `MyFirstJavaProgram`. Therefore, the file name must be the same, plus the `.java` file extension. (Make sure to remember where you saved the file)
+   > You **MUST** make sure the file name matches the name of your program (or the class). In this case, the class' name is `MyFirstJavaProgram`. Therefore, the file name must be the same, plus the `.java` file extension. (Make sure to remember where you saved the file)
    
 At this point, you have written your first program. However, you are unable to execute it. To execute your code, you need to learn more about how Java works. Remember that Java is a higher level programming language. As such, it needs to be compiled into machine code before your computer is able to execute it.
 
