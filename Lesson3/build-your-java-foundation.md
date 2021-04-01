@@ -63,7 +63,11 @@ To bring these ideas home, let's take another look at the method in your origina
 
 > A **method's body** is delimited by an opening brace and a closing brace. Inside the braces, you will write one or more related statements that perform some task. This task could be anything your program needs to do to fulfill its goal
 
-![Original Method](media/method-original.png)
+```java
+public static void main(String[] args) {
+    System.out.println("Hello, World!");
+}
+```
 
 If you have been following along, you can see that your method obviously has only one statement in its body. 
 
