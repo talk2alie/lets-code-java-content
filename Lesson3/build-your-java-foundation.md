@@ -93,16 +93,15 @@ On line 12, we have our same statement for printing text to the screen; except t
 
 > **NOTE:** There is a blank space after `Hello`; that is why there is a blank space in the resulting string; `Hello world`.
 
-
-
-
 #### 3.1.2.3 The `main` Method
 
 I have told you earlier you get to choose the name of your methods. Well, that is partially true. Every Java program must have at least one method, named `main`. This method is the entry point to your Java program. This means when you launch an app on an Android phone (most Android apps are written in Java), the first statement that is executed in that app is triggered from the `main` method.
 
 Because of this, the Java compiler expects this method's header to be **exactly** as follows:
 
-![Main Method Header](media/main-method-header.png)
+```java
+public static void main(String[] args)
+```
 
 Yes, it is exactly as the header you have for the main method in your first program. For now, just know that whenever I say "write an executable Java program," I mean write a class that has a method, in it, with this exact header. What you put in the body totally depends on the problem your program is meant to solve. The header, though, must look exactly as above (the colors don't matter).
 
