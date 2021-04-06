@@ -101,3 +101,81 @@ To set VS Code, go to File -> Preferences -> Settings, or use short key combinat
 ![VS Code Column Setting](media/vs-code-column-setting.png)
 
 
+
+
+### 4.1.4 Common Mistakes to avoid
+
+1. **Always close opening braces, parentheses, and/or quotation marks**<br>You know that the body of a class and the body of a method are enclosed inside braces. String literals are enclosed inside quotation marks, and method parameter lists are enclosed inside parentheses. Those symbols come in pairs. The left symbol is the opening and the right symbol is the closing. You must always close a brace, a parenthesis or a quotation mark when you open one. Otherwise, your code will not compile.
+
+2. **Never misspell keywords**<br>Keywords are mostly short, single and reserved words. Please do your best **never** to misspell them. Your code will not compile if you do.
+
+3. **Always ensure keywords are spelled with lowercase letters**<br>Every keyword, in Java, is spelled with lowercase letters. You must **never** spell keywords with uppercase letters. If you do, your code will not compile
+
+4. **Never use a keyword as an identifier**<br>Remember that an identifier is the name you assign to elements like classes, methods, fields and variables. You must **never** use a Java keyword as a variable name or as any other identifier. If you do, your code will not compile.
+
+5. **Always remember that Java is case-sensitive**<br>Java is case-sensitive. This means identifiers that only differ by capitalization are completely different. Every time you use an identifier, you must use the exact name you specified when you first created (or declared) it. For example, if you named a variable ``absoluteValue`, whenever you want to refer to that variable, you must use the exact spelling and capitalization. You will introduce bugs in your code if you play fast and loose with identifiers.
+
+6. **Always obey the Java rules for defining your identifiers**<br>Whenever you declare an identifier, a class, a method, a field, or a variable, make sure the name follows the Java rules. Never add space in an identifier. Never start an identifier with a number, etc. If you do, your code will not compile
+
+7. **Always terminate a complete statement with semi-colon**<br>Make sure to practice identifying what is or is not a statement. Always end your statements with a semi-colon. If you don't, your code will not compile
+
+8. **A variable can only hold one value at a time**<br>Do not mistakenly modify a variable, thinking it can hold multiple values at the same time. When you declare a variable, it can only hold one value at a time. The current value of your variable is the last value assigned to it, using the `=` (assignment operator).<br><br>For example: ![Variable Modification](media/variable-modification.png)
+
+## 4.2 Identifiers
+
+> An **Identifier** is any name you get to assign to a programming element, like a variable, a class, or a method. 
+
+Besides the Java keywords, identifiers are the only other named elements in your program. Because you get to name them, the names you choose are totally arbitrary and they can come from any part of your head. 😁
+
+![Identifiers](media/identifiers.png)
+
+To be a good Java developer though, it's a good practice to name your identifiers to clearly identify the concept you desire to represent in your program. Always pick names that will make it stupidly obvious for anyone reading your code to determine what that identifier represents. For example, when writing a program, give the program class a name that reflects what the program does. When naming a variable, give it a name that easily identifies what data is stored in it. 
+
+The following are really bad variable names: `x`, `foo`, `abc`.
+
+![Identifier Question](media/identifier-question.png)
+
+**Good question, Terry.** While those variable names are simple, they say nothing about the value they hold. What value, in the real world, could you possibly represent in a variable called `x`?
+
+**Consider this:** If you are working on an accounting program that calculates your monthly expenses, how much value do you think adding a variable called `x` would add to your program? Conversely, how much value do you think adding a variable called `weeklyExpenses` adds to your program?
+
+If you weighed those two variable names objectively, you would clearly see that not all variable names are created equal.
+
+### 4.2.1 Casing of Identifier Names
+
+You must have probably noticed I've used inconsistent casing for the identifiers I've used so far, in my programs. Sometimes you see some identifier names start with a lowercase letter, while other times you see they start with an uppercase letter. Well, it turns out, there is a method to my madness. 😜. Bear with me.
+
+![Camel Casing](media/camel-casing.png)
+
+In camel casing, the first letter of the identifier name begins with a lowercase letter. If there are multiple words, the first word begins with a lowercase letter and every subsequent word begins with an uppercase letter.
+
+E.g. `firstName`, `doctor`, `doctorsAppointment`, `oliversGoodKitchen`
+
+For classes, you use a type of camel casing called **PascalCasing**. Pascal Casing is camel casing where the first letter is upper case. 
+
+E.g. `Person`, `ElectronicComputer`, `EmpireStrikesBackGuard`.
+
+You can clearly see that the case differentials make the identifier names easier to read. So naming things this way is not only cool; it's also practical! 🙌🏾🙌🏾🙌🏾
+
+### 4.2.2 Parts of Speech of Identifier names
+
+It's a convention to use nouns for class names when the class name has only one word. If there are multiple words, then the first word should be an Adjective/Adverb. 
+
+E.g. `Professor`, `TenuredProfessor`.
+
+For variable names, they are usually nouns or linking verbs depending on how they are used. You will learn more about this later.
+
+As for methods, because they represent action, they should be named using action/linking verbs. For example, a method that calculates your GPA should be named, `calculateGpa`.
+
+### 4.2.3 Java Enforced Rules
+
+Well, all the rules I have specified above have been termed as conventions. Conventions are a way developers establish a common understanding about certain concepts. The Java compiler, on the other hand, cares very little about conventions. In fact, the Java compiler does not enforce any of the conventions mentioned above. It does; however, enforce its own rules that it has about identifiers. The following are identifier naming rules you must obey for your code to compile:
+
+1. The first character **must** be one of the letters a–z or A–Z, an underscore (_), or a dollar sign ($). 
+2. After the first character, you may use the letters a–z or A–Z, the digits 0–9, underscores (_), or dollar signs ($). 
+3. Uppercase and lowercase characters are distinct. This means `itemsOrdered` is not the same as `itemsordered`. 
+4. Identifiers **must** not include spaces.
+5. Identifiers **must** only be defined once in a given scope (you will learn more about scopes later)
+Identifiers can only be used within the scope where they are visible (remember the access modifiers public and private?)
+
+> **NOTE:** While the `$` is a valid character to use in an identifier name, I encourage you to avoid it, because `$` is normally used for special purposes in most programming languages.
