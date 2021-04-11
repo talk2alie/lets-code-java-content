@@ -77,3 +77,37 @@ double height;
 ```
 
 _FYI: I encourage you to keep your statements on separate lines_
+
+------
+
+![Puppy Warning](media/puppy-warning.png)
+
+### 5.1.1 Integer Data Types
+
+| Data Type Keyword | Size in Memory | Range of Numbers the Variable can hold |
+| :-- | :-- | :-- |
+| `byte` | 1 byte |	Integers in the range of: `-128` to `+127` |
+| `short` |	2 bytes	| Integers in the range of: `-32,768` to `+32,767` |
+| `int` | 4 bytes |	Integers in the range of: `−2,147,483,648` to `+2,147,483,647` |
+| `long` | 8 bytes | Integers in the range of: `−9,223,372,036,854,775,808` to `+9,223,372,036,854,775,807` |
+
+**Integer data types are used to represent whole numbers** (numbers with no decimal places), such as `17`, `128`, `33`, `56`, in your program. Each data type in the above table can be used to store a whole number. The only difference between them is their size; that is, how big of a number they can represent.
+
+The following code describe how to create and use integer variables.
+![Create and use integer variables](media/create-and-use-integer-variables.png)
+
+> **Program Output**<br><br>![Create and use integer variables output](media/create-and-use-integer-variables-output.png)
+
+**Integer Literals**
+
+In case you forgot, **a literal is a value you write in your code**. Every data type has its own literal. For the integer data types, their literal is pretty much any number that falls in their range, as shown in the table above.
+
+So, a byte literal would be any number that falls in the range; `-128` to `+127`. A short literal is any number that falls in the range; `-32,768` to `+32,767`. And so on.
+
+Having said that, there are two very important facts I want to point out:
+
+1. By default, Java considers any whole number in your code as an `int` literal. The reason for this should be obvious, but in case it's not to you, here is why: every integer literal of all the other integer data types (except `long`) falls in the range of the `int` data type. Ergo, while `1` is a `byte` literal, it's an `int` literal first. As a result, Java considers it an `int` literal.<br><br>If you want to explicitly specify that a number is a `long` literal, you must append "L" to the number. Small case "l" also works, but its similarity to the number, `1`, can cause confusion in some type faces. So, I advise you stick to using the uppercase L.<br><br>**E.g.**<br>![Integer Literal](media/integer-literals.png)
+
+2. When you assign large numeric literals to an integer variable, you might be tempted to separate the units of the numbers with commas. For example, you might be tempted to write `3267`8 as `32,678`. Yeah, don't do that! 😕. <br><br>For example:<br>![Icorrect unit separation](media/units-incorrect.png)<br><br>If you want to separate your units, use an underscore.<br><br>For example:<br>![Correct unit separation](media/units-correct.png)
+
+> ![Teacher integer variable warning](media/teacher-integer-variable-warning.png)
