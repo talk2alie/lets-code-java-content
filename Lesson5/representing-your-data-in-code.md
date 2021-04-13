@@ -193,7 +193,7 @@ You can also use scientific notations as floating-point literals. For example, c
 
 | Distance to the sun from earth in meters |
 | :--: |
-| `1.495979 x 10*11m` |
+| `1.495979 x 10^11m` |
 
 
 | Mass of earth in kilogram |
