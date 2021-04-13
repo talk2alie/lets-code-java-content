@@ -180,7 +180,7 @@ By default, Java considers any floating-point number you enter in your code as a
 
 To fix your error, you need to append "F" to the floating-point value.
 
-**E.g. Correctly assigning a floating-point literal to a float variable**
+**E.g. Correctly assigning a floating-point literal to a `float` variable**
 
 ![Incorrect Float Literal](media/float-literal-correct.png)
 
@@ -220,9 +220,6 @@ In your Java code, you must only use the E-Notation to assign floating-point lit
 
 Go ahead. Try. The. Code. Out!
 
-
-
-
 ## 5.2 The Boolean Data Type
 
 | Data Type Keyword | Size | Range of values the Variable can Hold |
@@ -245,7 +242,7 @@ A **Boolean** (capital B because it's named after someone; George Boole, to be s
 ## 5.3 The Character Data Type
 
 | Data Type Keyword | Size | Range of values the Variable can Hold |
-| :--: | :--: | :--: |
+| :--: | :--: | :-- |
 | `char` | 2 bytes | The 16-bit Unicode character set, numerically represented in the range: `0` (or `'\u0000'`) to `65,535` (or `'\uffff'`) |
 
 The character data type, keyword `char`, is used to represent characters in the 16-bit Unicode character set. You already know what the Unicode character set is. See _Lesson 1 (Unicode Character Set)_ in case you forgot. While Unicode characters in real life can go up to 32 bits, Java only supports a subset of Unicode characters, from `0` to `65,535`. That's still a large range to represent lots of different characters!
