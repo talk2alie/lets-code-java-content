@@ -130,3 +130,154 @@ Lucky for you, Java provides 2 other numeric data types for representing floatin
 | `double` | 8 bytes | Floating-point numbers in the range of: `±1.7×10−308` to `±1.7×10308`, with 15 digits of accuracy |
 
 ![Gwen asking question](media/gwen-question.png)
+
+Floating-point numbers are not only valuable because they can represent fractional numbers, they are also important because they can represent a level of accuracy that whole numbers simply can't. 
+
+For example, if you stored the value of PI in a long variable, while that variable will have enough space to store the whole number part of the value, you will lose the accuracy captured in the fractional part. 
+
+In fact, Java requires a special syntax for forcing a whole number data type, like long, to store a floating-point value, like PI.
+
+**E.g. Storing a floating-point value in a whole number variable**
+
+![Casting Example](media/cast.png)
+
+> **Program Output**<br><br>![Casting output](media/cast-output.png)
+
+**Magnitude vs. Accuracy of numbers**
+
+Floating-point numbers give us the perfect opportunity to take a tangent and talk about the **magnitude** and **accuracy** of numbers. Our entire scientific world is based on observation and experimentation. As such, we are always dealing with measurements. We measure mainly because we want to ascertain accuracy. 
+
+> **Accuracy (or precision)** is how close a measurement (the value stored in a variable) is to the correct value (the value that occured in nature). 
+
+For example, we know the value of pi to be `3.141592653589793238462643…`. As a result, the most accurate values of pi are the ones with the most significant figures (digits after the decimal point). Ergo, `3.14159` is more accurate than `3.14`. And `3.14` is more accurate than simply `3`.
+
+To handle this level of accuracy, Java gives us the `float` and `double` data types. Double variables can hold more accurate numbers because they can represent more significant digits (decimal places).
+
+Consider the following table. In the left column, we declare a `double` variable called `pi` and set it to a value of `pi`, up to 24 digits. In the right column, we do the same, except with a `float` variable. I want you to pay close attention to the results in both columns. 
+
+| Double | Float |
+| :--: | :--: |
+| ![Double Accuracy](media/double-accuracy.png) | ![Float Accuracy](media/float-accuracy.png) |
+|**Double Accuracy Output**<br><br>![Double Accuracy Output](media/double-accuracy-output.png) | **Float Accuracy Output**<br><br>![Float Accuracy Output](media/float-accuracy-output.png) |
+
+> **Magnitude** is how large a number is.
+
+The concept of magnitude is a little more intuitive. I mean after all, we all know 3 is greater than 4 and 5 is greater than 4. So by magnitude, if you think of long and double variables as water containers, they will hold about the same amount of water. However, by accuracy, a double container will hold a far more accurate value than a long container.
+
+**Floating-point Literals**
+
+Hopefully by now you are getting the hang of literals. Floating-point literals have decimal places. That is, they have a whole number part and a decimal (or fractional) part, separated by a decimal point (.).
+
+By default, Java considers any floating-point number you enter in your code as a `double` literal. So. numbers like `3.1415` and `9.8` will be considered `double` literals. To specify that a floating-point literal is a `float` literal, you must append "f" or "F" to the number (not both. Pick one and stick with it). The reason for specifying "F" to indicate a `float` literal is the same as the one for specifying "L" to indicate `long` literal.
+
+**E.g. Assigning a floating-point literal to a `double` variable:**
+
+![Double Literal](media/double-literal.png)
+
+**E.g. Incorrectly assigning a floating-point literal to a `float` variable:**
+
+![Incorrect Float Literal](media/float-literal-incorrect.png)
+
+To fix your error, you need to append "F" to the floating-point value.
+
+**E.g. Correctly assigning a floating-point literal to a float variable**
+
+![Incorrect Float Literal](media/float-literal-correct.png)
+
+You can also use scientific notations as floating-point literals. For example, consider the following values:
+
+| Gravitational constant; G |
+| :--: |
+| `6.67430 x 10^-11 m^2/kgs^2` |
+
+
+| Distance to the sun from earth in meters |
+| :--: |
+| `1.495979 x 10*11m` |
+
+
+| Mass of earth in kilogram |
+| :--: |
+| `5.972 x 10^24 kg` |
+
+Each of these values are very important, especially to astrophysicists and theoretical physicists (they are pretty much people who study what goes on in space and try to explain it using Math). As a result, many programs written for space exploration use them, a lot!
+
+To represent these numbers in your code, simply replace "x 10" with "e" or "E". The new value you get is the E-Notation equivalent of the scientific notation. 
+
+**For example:**
+
+| Scientific Notation | E Notation |
+| :-- | --: |
+| `6.67430 x 10^-11` | `6.67430E-11` |
+| `1.495979 x 10^11` | `1.495979e11` |
+| `5.972 x 10^24` | `5.972E24` |
+
+In your Java code, you must only use the E-Notation to assign floating-point literals to floating-point variables in the event you need to use scientific notations.
+
+**E.g. Representing E-Notation in code:**
+
+![E-Notation in Code](media/e-notation.png)
+
+Go ahead. Try. The. Code. Out!
+
+
+
+
+## 5.2 The Boolean Data Type
+
+| Data Type Keyword | Size | Range of values the Variable can Hold |
+| :--: | :--: | :--: |
+| `boolean` |	Represents `1 bit` of data, but its size isn't precisely defined | `true` or `false` |
+
+A **Boolean** (capital B because it's named after someone; George Boole, to be specific) is used to represent the values true and false. It doesn't get simpler than that, 🙌🏾. When you create a Boolean variable, you can only store one of those values in it; never both. Those values are called **Boolean expressions** or **Boolean literals**. They are useful when you need to evaluate conditions that are either true or false. In effect, they are used to evaluate the truthfulness of a condition. 
+
+> A **Boolean expression** is any expression or condition that evaluates to either true or false. A **condition** is a requirement within your code.
+
+![Boolean Data Type Example](media/boolean-example.png)
+
+**Quick Words about the Boolean Data Type**
+
+1. The keyword is `boolean` (small b).
+2. When naming Boolean variables, try to preface them with linking verbs. The idea is that these variables provide a true or false answer to a question.<br>E.g. `isValid`, `canRun`
+3. The Boolean literals are `true` and `false`. They are written in lowercase letters because they are also Java keywords.
+4. `"true"` and `"false"` are `String` literals, while `true` and `false` are Boolean literals. Do not confuse the two sets of literals. You can't assign a Boolean literal to any variable of any other data type. Similarly, you can't assign a `String` literal to any variable of any other data type.
+
+## 5.3 The Character Data Type
+
+| Data Type Keyword | Size | Range of values the Variable can Hold |
+| :--: | :--: | :--: |
+| `char` | 2 bytes | The 16-bit Unicode character set, numerically represented in the range: `0` (or `'\u0000'`) to `65,535` (or `'\uffff'`) |
+
+The character data type, keyword `char`, is used to represent characters in the 16-bit Unicode character set. You already know what the Unicode character set is. See _Lesson 1 (Unicode Character Set)_ in case you forgot. While Unicode characters in real life can go up to 32 bits, Java only supports a subset of Unicode characters, from `0` to `65,535`. That's still a large range to represent lots of different characters!
+
+### 5.3.1 Character Literals
+
+A character literal is simply a Unicode character enclosed in single quotes:
+
+**E.g.**
+
+![The Character Data Type](media/char-data-type.png)
+
+Because characters are ultimately stored in your computer's memory as numbers, you can, technically, use the integer literals in the range of `0` to `65,535` as character literals.
+
+**For example:**
+
+![Integer numbers as Character Literals](media/char-literal.png)
+
+The output of this code, when you run it, will be…, wait for it, `A`. Remember that `A` is the corresponding Unicode character for the number `65`.
+
+Notice that you can't fool the Java compiler when using integer literals as character literals. If you attempt to store any integer value outside the character literal range of `0` to `65,535`, the compiler will yell at you.
+
+**For example:**
+
+![Invalid integer as char literal](media/invalid-integer-as-char-literal.png)
+
+Finally, you can also use hexadecimal values for character literals:
+
+![Hexadecimal as char literals](media/hexadecimal.png)
+
+The output of this code is A, just like it was previously. You can find the hexadecimal value of the Unicode characters in the Unicode table [here](https://unicode-table.com/en/ "Unicode Table with Hexadecimal Values").
+
+
+
+
