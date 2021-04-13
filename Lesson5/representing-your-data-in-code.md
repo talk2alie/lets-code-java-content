@@ -111,3 +111,22 @@ Having said that, there are two very important facts I want to point out:
 2. When you assign large numeric literals to an integer variable, you might be tempted to separate the units of the numbers with commas. For example, you might be tempted to write `3267`8 as `32,678`. Yeah, don't do that! 😕. <br><br>For example:<br>![Icorrect unit separation](media/units-incorrect.png)<br><br>If you want to separate your units, use an underscore.<br><br>For example:<br>![Correct unit separation](media/units-correct.png)
 
 > ![Teacher integer variable warning](media/teacher-integer-variable-warning.png)
+
+### 5.1.2 Floating-Point Data Types
+
+![Retail Prices](media/retail-prices.png)
+
+In programming terms, a **floating-point number** is any number that has a fractional part. I think you will recognize the following number as what I call the most famous floating-point number:
+
+![PI](media/pi-image.png)
+
+Pi is very important to pretty much any calculation involved in our understanding of the universe. If you only had integer data types, there would be no way to represent Pi in your computer programs. 
+
+Lucky for you, Java provides 2 other numeric data types for representing floating-point numbers in your code:
+
+| Data Type Keyword | Size in Memory | Range of Numbers the Variable can hold |
+| :-- | :-- | :-- |
+| `float` | 4 bytes |	Floating-point numbers in the range of: `±3.4×10−38` to `±3.4×1038`, with 7 digits of accuracy |
+| `double` | 8 bytes | Floating-point numbers in the range of: `±1.7×10−308` to `±1.7×10308`, with 15 digits of accuracy |
+
+![Gwen asking question](media/gwen-question.png)
